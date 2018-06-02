@@ -1,0 +1,12 @@
+{
+	"UPLOAD_DIRECTORY" : "D:/Documents/eclipse-workspace/webservice/useruploads",
+	"NON_IMAGE_PATH" : "non-image",
+	"IMAGE_PATH" : "image",
+	"FORMAT" : "png",
+	"FULL_IMAGE_PATH":"full",
+	"LEFT_PART_PATH" : "left",
+	"RIGHT_PART_PATH" : "right",
+	"MIN_W" : 320,
+	"MIN_H" : 240,
+	"TILE_S" : 1024
+}

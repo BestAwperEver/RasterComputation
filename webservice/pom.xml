@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.radagast.asuscomm</groupId>
+    <artifactId>webservice</artifactId>
+    <packaging>war</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <overlays>
+                        <overlay />
+                        <overlay>
+                            <groupId>org.cometd.javascript</groupId>
+                            <artifactId>cometd-javascript-jquery</artifactId>
+                        </overlay>
+                    </overlays>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.15.v20140411</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webAppConfig>
+                        <contextPath>/webservice</contextPath>
+                    </webAppConfig>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+	<properties>
+		<jackson.version>2.9.4</jackson.version>
+	</properties>
+
+    <dependencies>
+	    <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+		<dependency>
+		    <groupId>org.mongodb</groupId>
+		    <artifactId>mongo-java-driver</artifactId>
+		    <version>3.6.3</version>
+		</dependency>
+    
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+        	<groupId>javax.servlet.jsp</groupId>
+        	<artifactId>javax.servlet.jsp-api</artifactId>
+        	<version>2.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.cometd.javascript</groupId>
+            <artifactId>cometd-javascript-jquery</artifactId>
+            <version>2.9.1</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>org.cometd.java</groupId>
+            <artifactId>cometd-java-server</artifactId>
+            <version>2.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.cometd.java</groupId>
+            <artifactId>cometd-websocket-jetty</artifactId>
+            <version>2.9.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.cometd.java</groupId>
+                    <artifactId>cometd-java-client</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-util</artifactId>
+            <version>8.1.15.v20140411</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-jmx</artifactId>
+            <version>8.1.15.v20140411</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-continuation</artifactId>
+            <version>8.1.15.v20140411</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-websocket</artifactId>
+            <version>8.1.15.v20140411</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlets</artifactId>
+            <version>8.1.15.v20140411</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-client</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        <dependency>
+        	<groupId>commons-fileupload</groupId>
+        	<artifactId>commons-fileupload</artifactId>
+        	<version>1.3.3</version>
+        </dependency>
+        <dependency>
+        	<groupId>javax.servlet</groupId>
+        	<artifactId>jstl</artifactId>
+        	<version>1.2</version>
+        </dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+		    <version>20180130</version>
+		</dependency>
+
+		<!-- Imglib2 -->
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2</artifactId>
+			<version>4.6.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		
+        
+    </dependencies>
+
+</project>
