@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="cuda_kernels.cu">
+      <Filter>Source code</Filter>
+    </CudaCompile>
+    <CudaCompile Include="transform_kernel.cu">
+      <Filter>Source code</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fasttrigo.cpp">
+      <Filter>Source code</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source code</Filter>
+    </ClCompile>
+    <ClCompile Include="tcp_connection.cpp">
+      <Filter>Source code</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source code</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fasttrigo.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="tcp_connection.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cuda_common.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source code">
+      <UniqueIdentifier>{f64b77aa-e18d-4f99-ba74-0964fb0f4cec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{3fb4b3ac-6b99-485a-871f-ad89662857e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
